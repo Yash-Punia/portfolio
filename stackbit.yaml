@@ -1,0 +1,53 @@
+stackbitVersion: ~0.3.0
+ssgName: gatsby
+nodeVersion: '12'
+publishDir: public
+pagesDir: src/markdown
+models:
+  markdown:
+    type: page
+    label: Markdown
+    match:
+      - people/blumine.md
+      - people/diogenes.md
+      - people/hofrath.md
+      - people/towgood.md
+      - research/robot-army.md
+      - research/robots.md
+      - research/time-travel.md
+    fields:
+      - type: string
+        name: email
+        label: Email
+      - type: image
+        name: image
+        label: Image
+      - type: string
+        name: name
+        label: Name
+      - type: number
+        name: order
+        label: Order
+        subtype: int
+      - type: string
+        name: title
+        label: Title
+  markdown_1:
+    type: page
+    label: Markdown 1
+    match:
+      - about.md
+    fields:
+      - type: image
+        name: image
+        label: Image
+      - type: string
+        name: title
+        label: Title
+  markdown_2:
+    type: page
+    label: Markdown 2
+    match: '*'
+    exclude:
+      - about.md
+    fields: []
